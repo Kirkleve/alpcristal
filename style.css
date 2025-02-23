@@ -23,17 +23,49 @@ header {
     overflow: hidden;
 }
 
-/* Логотип в правом верхнем углу */
+/* Стили для логотипа в левом верхнем углу */
 .logo-container {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 2;
 }
 
 .logo {
-    width: 120px; /* Размер логотипа */
+    width: 100px; /* Размер логотипа */
     height: auto;
+    display: block;
+    opacity: 0.8; /* Прозрачность для фона */
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 1; /* Логотип становится ярче при наведении */
+}
+
+/* Заголовок */
+header {
+    background: linear-gradient(to right, #000000 60%, #ff7f00 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: left;
+    position: relative;
+}
+
+.header-text {
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #ffea00; /* Жёлтые буквы */
+}
+
+header p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffea00; /* Жёлтые буквы */
 }
 
 /* Текст в шапке */
