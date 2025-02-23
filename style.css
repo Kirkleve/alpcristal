@@ -27,19 +27,25 @@ header .header-logo {
     z-index: 2;
 }
 
+/* Стили для логотипа на главной странице */
+header .header-logo {
+    position: relative;
+    z-index: 2;
+}
+
 header h1 {
     font-size: 50px;
     margin-bottom: 10px;
-    color: #ffea00; /* Жёлтые буквы */
+    color: #ffea00;
 }
 
 header p {
     font-size: 20px;
     margin-top: 10px;
-    color: #ffea00; /* Жёлтые буквы */
+    color: #ffea00;
 }
 
-/* Логотип как фон */
+/* Логотип как фон только на главной странице */
 header .header-logo::before {
     content: "";
     position: absolute;
@@ -54,6 +60,15 @@ header .header-logo::before {
     opacity: 0.15; /* Прозрачность логотипа */
     z-index: 1;
 }
+
+/* Для всех остальных страниц логотип отображается как картинка */
+header img.logo {
+    width: 120px; /* Размер логотипа */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
 
 /* Навигация */
 nav {
