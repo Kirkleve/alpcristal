@@ -148,3 +148,12 @@ footer {
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+/* Стили для логотипа */
+.logo {
+    width: 150px; /* Устанавливаем размер логотипа */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Центрируем логотип */
+}
+
