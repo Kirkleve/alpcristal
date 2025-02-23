@@ -15,45 +15,19 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(to right, #000000 60%, #ff7f00 100%); /* Черный фон с переходом в оранжевый */
+    background: url('assets/Logo_AlpKristall_001.jpg') no-repeat center center;
+    background-size: cover; /* Растягиваем логотип на всю ширину и высоту */
+    height: 100vh; /* Высота всего экрана */
     color: white;
-    padding: 80px 20px;
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Стили для логотипа в левом верхнем углу */
-.logo-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-}
-
-.logo {
-    width: 100px; /* Размер логотипа */
-    height: auto;
-    display: block;
-    opacity: 0.8; /* Прозрачность для фона */
-    transition: opacity 0.3s ease;
-}
-
-.logo:hover {
-    opacity: 1; /* Логотип становится ярче при наведении */
-}
-
-/* Заголовок */
-header {
-    background: linear-gradient(to right, #000000 60%, #ff7f00 100%);
-    color: white;
-    padding: 80px 20px;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
 }
 
-.header-text {
-    z-index: 1;
+.header-content {
+    z-index: 2; /* Текст будет сверху */
 }
 
 header h1 {
@@ -66,23 +40,7 @@ header p {
     font-size: 20px;
     margin-top: 10px;
     color: #ffea00; /* Жёлтые буквы */
-}
-
-/* Текст в шапке */
-.header-text {
-    z-index: 1;
-}
-
-header h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: #ffea00; /* Жёлтые буквы */
-}
-
-header p {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #ffea00; /* Жёлтые буквы */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тень для текста */
 }
 
 /* Навигация */
