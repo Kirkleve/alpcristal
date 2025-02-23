@@ -15,60 +15,43 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(to right, #000000, #ff7f00); /* Черный фон с переходом в оранжевый */
+    background: linear-gradient(to right, #000000 60%, #ff7f00 100%); /* Черный фон с переходом в оранжевый */
     color: white;
     padding: 80px 20px;
-    text-align: center;
+    text-align: left;
     position: relative;
+    overflow: hidden;
 }
 
-header .header-logo {
-    position: relative;
+/* Логотип в правом верхнем углу */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     z-index: 2;
 }
 
-/* Стили для логотипа на главной странице */
-header .header-logo {
-    position: relative;
-    z-index: 2;
+.logo {
+    width: 120px; /* Размер логотипа */
+    height: auto;
+}
+
+/* Текст в шапке */
+.header-text {
+    z-index: 1;
 }
 
 header h1 {
     font-size: 50px;
     margin-bottom: 10px;
-    color: #ffea00;
+    color: #ffea00; /* Жёлтые буквы */
 }
 
 header p {
     font-size: 20px;
     margin-top: 10px;
-    color: #ffea00;
+    color: #ffea00; /* Жёлтые буквы */
 }
-
-/* Логотип как фон только на главной странице */
-header .header-logo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('assets/Logo_AlpKristall_001.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.15; /* Прозрачность логотипа */
-    z-index: 1;
-}
-
-/* Для всех остальных страниц логотип отображается как картинка */
-header img.logo {
-    width: 120px; /* Размер логотипа */
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-}
-
 
 /* Навигация */
 nav {
