@@ -6,32 +6,33 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #333;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 18px;
-    margin-top: 10px;
 }
 
 /* Navigation */
 nav {
-    background-color: #222;
-    padding: 10px 0;
+    background-color: #333;
+    padding: 15px 0;
 }
 
 nav .container {
@@ -41,31 +42,49 @@ nav .container {
 
 nav a {
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     text-decoration: none;
     margin: 0 15px;
-    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #444;
+    background-color: #00f2fe;
+    transform: scale(1.1);
 }
 
-/* About section */
+/* About Section */
 #about {
     background-color: white;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 #about h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 #about p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 80%;
+    max-width: 900px;
+    margin-top: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -74,14 +93,38 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-/* Container for centering content */
+/* Container */
 .container {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    #about img {
+        width: 100%;
+    }
+}
+
 
 /* Дополнительные стили для галереи */
 .gallery {
