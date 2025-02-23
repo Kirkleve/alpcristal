@@ -15,30 +15,19 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(to right, #000000 60%, #ff7f00 100%); /* Черный фон с переходом в оранжевый */
+    background: url('assets/Logo_AlpKristall_001.jpg') no-repeat center center;
+    background-size: cover; /* Растягиваем логотип на всю ширину и высоту */
+    height: 100vh; /* Высота всего экрана */
     color: white;
-    padding: 80px 20px;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
-/* Логотип в правом верхнем углу */
-.logo-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-}
-
-.logo {
-    width: 120px; /* Размер логотипа */
-    height: auto;
-}
-
-/* Текст в шапке */
-.header-text {
-    z-index: 1;
+.header-content {
+    z-index: 2; /* Текст будет сверху */
 }
 
 header h1 {
@@ -51,12 +40,18 @@ header p {
     font-size: 20px;
     margin-top: 10px;
     color: #ffea00; /* Жёлтые буквы */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тень для текста */
 }
 
 /* Навигация */
 nav {
     background-color: #222;
     padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 nav .container {
@@ -79,6 +74,13 @@ nav a:hover {
     background-color: #ff7f00;
     color: #222;
     transform: scale(1.05);
+}
+
+/* Section */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* About Section */
@@ -120,7 +122,65 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
+/* Services Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.photo {
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -130,13 +190,6 @@ footer {
     width: 100%;
     bottom: 0;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Container */
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
 }
 
 /* Mobile styles */
@@ -154,7 +207,17 @@ footer {
         font-size: 14px;
     }
 
-    #about img {
+    .about-image {
         width: 100%;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 300px;
     }
 }
